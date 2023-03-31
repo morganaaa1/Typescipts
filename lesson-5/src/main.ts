@@ -21,5 +21,12 @@ let myVal: string = addOrConcat(1, 2, 'concat') as string
 // be careful! TS sees no problem here - but a string is returned
 let nextVal: number = addOrConcat(1, 2, 'concat') as number
 
-10 as string
+// 10 as string
 (10 as unknown) as string
+
+// The DOM
+const img = document.querySelector('img') as HTMLImageElement
+const myImg = document.getElementById('img') as HTMLImageElement
+
+img.src
+myImg.src
