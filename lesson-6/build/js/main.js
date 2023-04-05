@@ -59,3 +59,25 @@ console.log(John.id);
 console.log(Steve.id);
 console.log(Amy.id);
 console.log(Peeps.count);
+class Bands {
+    constructor() {
+        this.dataState = [];
+    }
+    get data() {
+        return this.dataState;
+    }
+    set data(value) {
+        if (Array.isArray(value) && value.every(el => typeof el === 'string')) {
+            this.dataState = value;
+            return;
+        }
+        else
+            throw new Error('Param must be an array of strings');
+    }
+}
+const MyBands = new Bands();
+MyBands.data = ['Neil Young', 'The Beatles', 'The Rolling Stones'];
+console.log(MyBands.data);
+MyBands.data = [...MyBands.data, 'The Who'];
+console.log(MyBands.data);
+MyBands.data = ['Herman Li', 'Sam Totman', 'John Petrucci'];
