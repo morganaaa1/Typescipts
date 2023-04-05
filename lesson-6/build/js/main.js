@@ -30,5 +30,14 @@ class WebDev extends Coder {
 }
 const Sara = new WebDev('MacBook Pro', 'Sara', 'Pop', 25);
 console.log(Sara.getLang());
-// console.log(Sara.age);
-// console.log(Sara.lang);
+class Guitarist {
+    constructor(name, instrument) {
+        this.name = name;
+        this.instrument = instrument;
+    }
+    play(action) {
+        return `${this.name} is ${action} on ${this.instrument}`;
+    }
+}
+const Page = new Guitarist('Jimmy Page', 'Guitar');
+console.log(Page.play('playing'));

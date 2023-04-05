@@ -46,3 +46,27 @@ const Sara = new WebDev('MacBook Pro', 'Sara', 'Pop', 25);
 console.log(Sara.getLang());
 // console.log(Sara.age);
 // console.log(Sara.lang);
+
+interface Musician {
+    name: string;
+    instrument: string;
+    play(action: string): string;
+}
+
+class Guitarist implements Musician {
+    name: string;
+    instrument: string;
+
+
+    constructor(name: string, instrument: string) {
+        this.name = name;
+        this.instrument = instrument;
+    }
+
+    play(action: string) {
+        return `${this.name} is ${action} on ${this.instrument}`;
+    }
+}
+
+const Page = new Guitarist('Jimmy Page', 'Guitar');
+console.log(Page.play('playing'));
