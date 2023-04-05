@@ -1,14 +1,10 @@
 "use strict";
 // Index Signature
-// interface TransactionObj {
-//     Pizza: number;
-//     Books: number;
-//     Job: number;
-// }
 const todaysTransactions = {
     Pizza: -10,
     Books: -5,
-    Job: 50
+    Job: 50,
+    Ali: 42
 };
 console.log(todaysTransactions.Pizza);
 console.log(todaysTransactions['Pizza']);
@@ -24,3 +20,9 @@ const todaysNet = (transactions) => {
 console.log(todaysNet(todaysTransactions));
 // todaysTransactions.Pizza = 40;
 console.log(todaysTransactions['Ali']);
+const student = {
+    name: 'Ali',
+    GPA: 3.5,
+    classes: [100, 200]
+};
+// console.log(student.test);
