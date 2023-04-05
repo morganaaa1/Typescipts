@@ -18,3 +18,17 @@ const HermanLi = new Coder('Herman Li', 'Rock', 30);
 console.log(HermanLi.getAge());
 // console.log(HermanLi.age);
 // console.log(HermanLi.lang);
+class WebDev extends Coder {
+    constructor(computer, name, music, age) {
+        super(name, music, age);
+        this.computer = computer;
+        this.computer = computer;
+    }
+    getLang() {
+        return `I write code in ${this.lang}`;
+    }
+}
+const Sara = new WebDev('MacBook Pro', 'Sara', 'Pop', 25);
+console.log(Sara.getLang());
+// console.log(Sara.age);
+// console.log(Sara.lang);
