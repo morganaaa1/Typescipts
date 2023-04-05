@@ -22,5 +22,5 @@ class Coder {
 
 const HermanLi = new Coder('Herman Li', 'Rock', 30);
 console.log(HermanLi.getAge());
-console.log(HermanLi.age);
-console.log(HermanLi.lang);
+// console.log(HermanLi.age);
+// console.log(HermanLi.lang);
