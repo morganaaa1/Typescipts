@@ -1,5 +1,6 @@
 class Coder {
 
+    secondLang!: string;
 
     constructor(
         public readonly name: string, 
