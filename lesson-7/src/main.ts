@@ -62,3 +62,28 @@ for (const key in student) {
 Object.keys(student).map(key => {
     console.log(student[key as keyof typeof student])
 })
+
+const logStudentKey = (student: Student, key: keyof Student): void => {
+    console.log(`Student ${key}: ${student[key]}`);
+}
+
+logStudentKey(student, 'name');
+
+
+// interface Incomes {
+//     [key: string]: number;
+// }
+
+type Streams = 'salary' | 'bonus' | 'sidehustle'
+
+type Incomes = Record<Streams, number | string>
+
+const monthlyIncomes: Incomes = {
+    salary: 500,
+    bonus: 100,
+    sidehustle: 250
+}
+
+for (const revenue in monthlyIncomes) {
+    console.log(monthlyIncomes[revenue as keyof Incomes])
+}
