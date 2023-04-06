@@ -39,3 +39,10 @@ const preview = {
     studentId: '123',
     title: 'Assignment 1'
 };
+// ReturnType
+// type newAssign = { title: string, points: number }
+const createNewAssign = (title, points) => {
+    return { title, points };
+};
+const tsAssign = createNewAssign('TypeScript', 100);
+console.log(tsAssign);

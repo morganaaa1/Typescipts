@@ -84,3 +84,16 @@ type highGrades = Extract<LetterGrades, "A" | "B">
 
 type AllPossibleGrades = 'Ali' | 'Bob' | 'Cindy' | null | undefined
 type NamesOnly = NonNullable<AllPossibleGrades>
+
+// ReturnType
+
+// type newAssign = { title: string, points: number }
+
+const createNewAssign = (title: string, points: number) => {
+    return { title, points }
+}
+
+type NewAssign = ReturnType<typeof createNewAssign>
+
+const tsAssign: NewAssign = createNewAssign('TypeScript', 100)
+console.log(tsAssign)
