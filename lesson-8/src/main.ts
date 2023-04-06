@@ -138,3 +138,8 @@ class StateObject<T> {
 const store = new StateObject("Ali")
 console.log(store.state)
 store.state = "John"
+// store.state = 1 // error
+
+const myState = new StateObject<(string|number|boolean)[]>([15])
+myState.state = (['ali', 1, true])
+console.log(myState.state)
