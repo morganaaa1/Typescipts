@@ -97,3 +97,12 @@ type NewAssign = ReturnType<typeof createNewAssign>
 
 const tsAssign: NewAssign = createNewAssign('TypeScript', 100)
 console.log(tsAssign)
+
+// Parameters
+
+type AssignParams = Parameters<typeof createNewAssign>
+
+const assignArgs: AssignParams = ['JavaScript', 100]
+
+const tsAssign2: NewAssign = createNewAssign(...assignArgs)
+console.log(tsAssign2)

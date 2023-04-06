@@ -46,3 +46,6 @@ const createNewAssign = (title, points) => {
 };
 const tsAssign = createNewAssign('TypeScript', 100);
 console.log(tsAssign);
+const assignArgs = ['JavaScript', 100];
+const tsAssign2 = createNewAssign(...assignArgs);
+console.log(tsAssign2);
