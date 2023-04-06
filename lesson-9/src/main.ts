@@ -57,3 +57,19 @@ const gradeData: Record<Students, Grades> = {
     Sara: { assign1: 100, assign2: 100 },
     Kelly: { assign1: 90, assign2: 80 }
 }
+
+// Pick and Omit
+
+type AssignResult = Pick<Assignment, "studentId" | "grade">
+
+const score: AssignResult = {
+    studentId: '123',
+    grade: 100
+}
+
+type AssignPreview = Omit<Assignment, "grade" | "verified">
+
+const preview: AssignPreview = {
+    studentId: '123',
+    title: 'Assignment 1'
+}
