@@ -2,7 +2,11 @@ import Heading from "./components/Heading"
 import { Section } from "./components/Section"
 import Counter from "./components/Counter"
 
+import { useState } from "react"
+
 function App() {
+
+  const [count, setCount] = useState<number>(1);
 
   return (
     <>
@@ -10,7 +14,7 @@ function App() {
       <Section title={"Different title"}>
         This is my section
       </Section>
-      <Counter />
+      <Counter setCount={setCount}>Count is {count}</Counter>
     </>  
   )
 
