@@ -1,5 +1,6 @@
 import Heading from "./components/Heading"
 import { Section } from "./components/Section"
+import Counter from "./components/Counter"
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
       <Section title={"Different title"}>
         This is my section
       </Section>
+      <Counter />
     </>  
   )
 
