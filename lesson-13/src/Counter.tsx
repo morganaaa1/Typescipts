@@ -15,8 +15,8 @@ const Counter = ({ children }: ChildrenType) => {
         <>
             <h1>{children(count)}</h1>
             <div>
-                <button onClick={increment}></button>
-                <button onClick={decrement}></button>
+                <button onClick={increment}>+</button>
+                <button onClick={decrement}>-</button>
             </div>
         </>
     )
