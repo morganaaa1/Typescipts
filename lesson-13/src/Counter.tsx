@@ -1,9 +1,5 @@
 import { ReactNode, useReducer, ChangeEvent, useState } from 'react'
 
-type ChildrenType = {
-    children: (num: number) => ReactNode
-}
-
 const initState = { count: 0 }
 
 const enum REDUCER_ACTION_TYPE {
@@ -13,6 +9,17 @@ const enum REDUCER_ACTION_TYPE {
 
 type ReducerAction = {
     type: REDUCER_ACTION_TYPE
+}
+
+const reducer = (state: typeof initState, action: ReducerAction): typeof initState => {
+    switch (action.type) {
+        case REDUCER_ACTION_TYPE.INCREMENT:
+            return { ...state, count: state.count + 1 }
+        case REDUCER_ACTION_TYPE.DECREMENT:
+            return { ...state, count: state.count - 1 }
+        default:
+            throw new Error()
+    }
 }
 
 const Counter = ({ children }: ChildrenType) => {
