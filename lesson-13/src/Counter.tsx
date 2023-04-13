@@ -24,14 +24,16 @@ const reducer = (state: typeof initState, action: ReducerAction): typeof initSta
 
 const Counter = ({ children }: ChildrenType) => {
 
-    const [count, setCount] = useState<number>(1)
+    // const [count, setCount] = useState<number>(1)
+
+    const [state, dispatch] = useReducer(reducer, initState)
     
-    const increment = () => setCount(prev => prev + 1)
-    const decrement = () => setCount(prev => prev - 1)
+    const increment = () => dispatch({ type: REDUCER_ACTION_TYPE.INCREMENT })
+    const decrement = () => dispatch({ type: REDUCER_ACTION_TYPE.DECREMENT })
 
     return (
         <>
-            <h1>{children(count)}</h1>
+            <h1>{children(state.count)}</h1>
             <div>
                 <button onClick={increment}>+</button>
                 <button onClick={decrement}>-</button>
