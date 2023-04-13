@@ -1,23 +1,19 @@
-import Heading from "./components/Heading"
-import { Section } from "./components/Section"
-import Counter from "./components/Counter"
-import List from "./components/List"
-
 import { useState } from "react"
 
-function App() {
+interface User {
+  id: number;
+  username: string;
+}
 
-  const [count, setCount] = useState<number>(1);
+function App() {
+  
+  const [count, setCount] = useState<number>(0);
+  const [users, setUsers] = useState<User[] | null>(null);
 
   return (
     <>
-      <Heading title={"Hello"} />
-      <Section title={"Different title"}>
-        This is my section
-      </Section>
-      <Counter setCount={setCount}>Count is {count}</Counter>
-      <List items={["Coffee", "Seblak", "Code"]} render={(item: string) => <span className="gold bold">{item}</span>} />
-      </>  
+        
+    </>  
   )
 
 }
