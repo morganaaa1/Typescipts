@@ -4,6 +4,9 @@ type ChildrenType = {
     children: (num: number) => ReactNode
 }
 
+const initState = { count: 0 }
+
+
 const Counter = ({ children }: ChildrenType) => {
 
     const [count, setCount] = useState<number>(1)
